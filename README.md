@@ -37,14 +37,14 @@ chooseDirectory() => Promise<UrlBookmark>
 ### accessDirectory(...)
 
 ```typescript
-accessDirectory(options: UrlBookmark) => Promise<{ url: string; }>
+accessDirectory(options: UrlBookmark) => Promise<SecureUrl>
 ```
 
 | Param         | Type                                                |
 | ------------- | --------------------------------------------------- |
 | **`options`** | <code><a href="#urlbookmark">UrlBookmark</a></code> |
 
-**Returns:** <code>Promise&lt;{ url: string; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#secureurl">SecureUrl</a>&gt;</code>
 
 --------------------
 
@@ -70,5 +70,12 @@ releaseDirectory(options: UrlBookmark) => Promise<void>
 | Prop              | Type                |
 | ----------------- | ------------------- |
 | **`urlBookmark`** | <code>string</code> |
+
+
+#### SecureUrl
+
+| Prop      | Type                |
+| --------- | ------------------- |
+| **`url`** | <code>string</code> |
 
 </docgen-api>

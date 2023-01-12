@@ -1,6 +1,6 @@
 {
   "name": "capacitor-ios-file-picker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Allows picking one or more files/directories on iOS, including files from outside your app's sandbox. Under the covers, we use the iOS UIDocumentPickerViewController and security-scoped URLs to accomplish this.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

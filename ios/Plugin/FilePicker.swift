@@ -17,6 +17,7 @@ import UniformTypeIdentifiers
     DispatchQueue.main.async {
       let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.folder])
       documentPicker.delegate = self
+      documentPicker.modalPresentationStyle = .fullScreen
       self.bridge?.viewController?.present(documentPicker, animated: true, completion: nil)
     }
   }
