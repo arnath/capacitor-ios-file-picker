@@ -7,12 +7,18 @@ import Capacitor
  */
 @objc(FilePickerPlugin)
 public class FilePickerPlugin: CAPPlugin {
-    private let implementation = FilePicker()
-
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
-    }
+  @objc func chooseDirectory(_ call: CAPPluginCall) {
+    let filePicker = FilePicker(call, self.bridge)
+    filePicker.chooseDirectory()
+  }
+  
+  @objc func accessDirectory(_ call: CAPPluginCall) {
+    let filePicker = FilePicker(call, self.bridge)
+    filePicker.accessDirectory()
+  }
+  
+  @objc func releaseDirectory(_ call: CAPPluginCall) {
+    let filePicker = FilePicker(call, self.bridge)
+    filePicker.releaseDirectory()
+  }
 }
