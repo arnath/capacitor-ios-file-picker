@@ -1,9 +1,13 @@
 export interface UrlBookmark {
-  urlBookmark: string;
+  urlBookmark?: string;
+}
+
+export interface SecureUrl {
+  url?: string;
 }
 
 export interface FilePickerPlugin {
   chooseDirectory(): Promise<UrlBookmark>;
-  accessDirectory(options: UrlBookmark): Promise<{url: string}>;
+  accessDirectory(options: UrlBookmark): Promise<SecureUrl>;
   releaseDirectory(options: UrlBookmark): Promise<void>;
 }

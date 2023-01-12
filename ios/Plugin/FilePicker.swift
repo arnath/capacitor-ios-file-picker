@@ -75,4 +75,9 @@ import UniformTypeIdentifiers
       self.call.reject("Failed to retrieve bookmark for external directory.")
     }
   }
+  
+  @objc(documentPickerWasCancelled:)
+  public func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+    self.call.resolve()
+  }
 }

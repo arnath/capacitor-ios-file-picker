@@ -1,6 +1,6 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { FilePickerPlugin, UrlBookmark } from './definitions';
+import type { FilePickerPlugin, SecureUrl, UrlBookmark } from './definitions';
 
 export class FilePickerWeb extends WebPlugin implements FilePickerPlugin {
   async chooseDirectory(): Promise<UrlBookmark> {
@@ -8,7 +8,7 @@ export class FilePickerWeb extends WebPlugin implements FilePickerPlugin {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async accessDirectory(_options: UrlBookmark): Promise<{url: string}> {
+  async accessDirectory(_options: UrlBookmark): Promise<SecureUrl> {
     throw 'Not supported for web';
   }
 
